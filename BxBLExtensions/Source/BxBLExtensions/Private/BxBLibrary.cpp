@@ -171,17 +171,6 @@ void UBxBLibrary::Branch_FGreaterOREqual(float Check, float Against, TEnumAsByte
 }
 //
 //
-void UBxBLibrary::Branch_Enum(TEnumAsByte<EObjectTypeQuery>Check, TEnumAsByte<EObjectTypeQuery>Against, TEnumAsByte<EN_Match>&Branches)
-{
-	if (Check.GetValue() == Against.GetValue()) {
-		Branches = EN_Match::IfMatch;
-	}
-	else {
-		Branches = EN_Match::IfNot;
-	}
-}
-//
-//
 void UBxBLibrary::Branch_Color(FLinearColor Check, FLinearColor Against, TEnumAsByte<EN_Match>&Branches, float Tolerance)
 {
 	if (Check.Equals(Against, Tolerance)) {
@@ -253,6 +242,32 @@ void UBxBLibrary::Branch_PCNotEqual(UPrimitiveComponent *Check, UPrimitiveCompon
 		Branches = EN_NotEqual::IfSo;
 	}
 }
+//
+//
+void UBxBLibrary::Branch_Trace(TEnumAsByte<ETraceTypeQuery>Check, TEnumAsByte<ETraceTypeQuery>Against, TEnumAsByte<EN_Match>&Branches)
+{
+	if (Check.GetValue() == Against.GetValue()) {
+		Branches = EN_Match::IfMatch;
+	}
+	else {
+		Branches = EN_Match::IfNot;
+	}
+}
+//
+void UBxBLibrary::Branch_PhysMat(TEnumAsByte<EObjectTypeQuery>Check, TEnumAsByte<EObjectTypeQuery>Against, TEnumAsByte<EN_Match>&Branches)
+{
+	if (Check.GetValue() == Against.GetValue()) {
+		Branches = EN_Match::IfMatch;
+	}
+	else {
+		Branches = EN_Match::IfNot;
+	}
+}
+//
+//
+/////////////////////////////////////////////////////////
+//     ::ARITHMETICS::                                  //
+/////////////////////////////////////////////////////////
 //
 //
 int32 UBxBLibrary::INTPosIncrement(int32 Value)

@@ -121,11 +121,6 @@ class BXBLEXTENSIONS_API UBxBLibrary : public UBlueprintFunctionLibrary
 	static void Branch_FGreaterOREqual(float Check, float Against, TEnumAsByte<EN_IfThenElse>&Branches);
 	//
 	//
-	/** Branch:: Checks if Enum 'A' matches Enum 'B'. */
-	UFUNCTION(BlueprintCallable, Category = "Blueprint Extensions|Branches", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", FriendlyName = "Does Enums Match?", Keywords = "bxbl enum match equals", ExpandEnumAsExecs = "Branches"))
-	static void Branch_Enum(TEnumAsByte<EObjectTypeQuery>Check, TEnumAsByte<EObjectTypeQuery>Against, TEnumAsByte<EN_Match>&Branches);
-	//
-	//
 	/** Branch:: Checks if Color 'A' matches Color 'B' by given Tolerance factor. */
 	UFUNCTION(BlueprintCallable, Category = "Blueprint Extensions|Branches", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", FriendlyName = "Does Colors Match?", Keywords = "bxbl color match equals", ExpandEnumAsExecs = "Branches"))
 	static void Branch_Color(FLinearColor Check, FLinearColor Against, TEnumAsByte<EN_Match>&Branches, float Tolerance = 0.01f);
@@ -156,6 +151,15 @@ class BXBLEXTENSIONS_API UBxBLibrary : public UBlueprintFunctionLibrary
 	/** Branch:: Checks if primitive 'A' is not equal to primitive 'B'. */
 	UFUNCTION(BlueprintCallable, Category = "Blueprint Extensions|Branches", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", FriendlyName = "Primitive A not equal to B?", Keywords = "bxbl primitive not equal", ExpandEnumAsExecs = "Branches"))
 	static void Branch_PCNotEqual(UPrimitiveComponent *Check, UPrimitiveComponent *Against, TEnumAsByte<EN_NotEqual>&Branches);
+	//
+	//
+	/** Branch:: Checks if Enum 'A' matches Enum 'B'. */
+	UFUNCTION(BlueprintCallable, Category = "Blueprint Extensions|Branches", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", FriendlyName = "Does Enums Match?", Keywords = "bxbl enum match equals", ExpandEnumAsExecs = "Branches"))
+	static void Branch_Trace(TEnumAsByte<ETraceTypeQuery>Check, TEnumAsByte<ETraceTypeQuery>Against, TEnumAsByte<EN_Match>&Branches);
+	//
+	/** Branch:: Checks if Enum 'A' matches Enum 'B'. */
+	UFUNCTION(BlueprintCallable, Category = "Blueprint Extensions|Branches", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", FriendlyName = "Does Enums Match?", Keywords = "bxbl enum match equals", ExpandEnumAsExecs = "Branches"))
+	static void Branch_PhysMat(TEnumAsByte<EObjectTypeQuery>Check, TEnumAsByte<EObjectTypeQuery>Against, TEnumAsByte<EN_Match>&Branches);
 	//
 	//
 	/////////////////////////////////////////////////////////
