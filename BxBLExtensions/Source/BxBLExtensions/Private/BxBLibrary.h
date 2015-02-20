@@ -167,78 +167,78 @@ class BXBLEXTENSIONS_API UBxBLibrary : public UBlueprintFunctionLibrary
 	/////////////////////////////////////////////////////////
 	//
 	//
-	/** Math:: (Pos)increments Value. */
+	/** Math:: (Pos)increments Value. (Value+1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "++", FriendlyName = "(Pos)increment", Keywords = "bxbl int increment ++"))
 	static int32 INTPosIncrement(int32 Value);
 	//
-	/** Math:: (Pre)increments Value. */
+	/** Math:: (Pre)increments Value. (Value+1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "++", FriendlyName = "(Pre)increment", Keywords = "bxbl int increment ++"))
 	static int32 INTPreIncrement(int32 Value);
 	//
-	/** Math:: (Pos)decrements Value. */
+	/** Math:: (Pos)decrements Value. (Value-1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "--", FriendlyName = "(Pos)decrement", Keywords = "bxbl int increment --"))
 	static int32 INTPosDecrement(int32 Value);
 	//
-	/** Math:: (Pre)decrements Value. */
+	/** Math:: (Pre)decrements Value. (Value+1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "--", FriendlyName = "(Pre)decrement", Keywords = "bxbl int increment --"))
 	static int32 INTPreDecrement(int32 Value);
 	//
-	/** Math:: (Plus) Value = Value+i. */
+	/** Math:: Increments Value. (Value+Value). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "+=", FriendlyName = "Increment", Keywords = "bxbl int increment +="))
-	static int32 INTIncrement(int32 Value, int32 i);
-	/** Math:: (Minus) Value = Value-i. */
+	static int32 INTIncrement(int32 Value);
+	/** Math:: Decrements Value. (Value-Value). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "-=", FriendlyName = "Decrement", Keywords = "bxbl int decrement -="))
-	static int32 INTDecrement(int32 Value, int32 i);
+	static int32 INTDecrement(int32 Value);
 	//
-	/** Math:: (Multiply) Value = Value*i. */
+	/** Math:: Multiply Value. (Value*Value). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "*=", FriendlyName = "Multiply", Keywords = "bxbl int multiply *="))
-	static int32 INTMultiply(int32 Value, int32 i);
+	static int32 INTMultiply(int32 Value);
 	//
-	/** Math:: (Divide) Value = Value/i. */
+	/** Math:: Divide Value. (Value/Value*i). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "/=", FriendlyName = "Divide", Keywords = "bxbl int divide /="))
 	static int32 INTDivide(int32 Value, int32 i);
 	//
-	/** Math:: (Mod) Value = Value%i. */
+	/** Math:: Mod. (Value=Value%i). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "%=", FriendlyName = "Modulo", Keywords = "bxbl int modulo %="))
-		static int32 INTModulo(int32 Value, int32 i);
+	static int32 INTModulo(int32 Value, int32 i);
 	//
-	/** Math:: (Percent) Value = Value * i / 100. */
+	/** Math:: Percent (Value=Value*i/100). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "%%", FriendlyName = "Percent", Keywords = "bxbl int percent %%"))
 	static int32 INTPercent(int32 Value, int32 i);
 	//
 	//
-	/** Math:: (Pos)increments Value. */
+	/** Math:: (Pos)increments Value. (Value+1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "++", FriendlyName = "(Pos)increment", Keywords = "bxbl float increment ++"))
 	static float FPosIncrement(float Value);
 	//
-	/** Math:: (Pre)increments Value. */
+	/** Math:: (Pre)increments Value. (Value+1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "++", FriendlyName = "(Pre)increment", Keywords = "bxbl float increment ++"))
 	static float FPreIncrement(float Value);
 	//
-	/** Math:: (Pos)decrements Value. */
+	/** Math:: (Pos)decrements Value. (Value-1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "--", FriendlyName = "(Pos)decrement", Keywords = "bxbl float increment --"))
 	static float FPosDecrement(float Value);
 	//
-	/** Math:: (Pre)decrements Value. */
+	/** Math:: (Pre)decrements Value. (Value+1) */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "--", FriendlyName = "(Pre)decrement", Keywords = "bxbl float increment --"))
 	static float FPreDecrement(float Value);
 	//
-	/** Math:: (Plus) Value = Value + f. */
+	/** Math:: Increments Value. (Value+Value). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "+=", FriendlyName = "Increment", Keywords = "bxbl float increment +="))
-	static float FIncrement(float Value, float f);
-	/** Math:: (Minus) Value = Value - f. */
+	static float FIncrement(float Value);
+	/** Math:: Decrements Value. (Value-Value). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "-=", FriendlyName = "Decrement", Keywords = "bxbl float decrement -="))
-	static float FDecrement(float Value, float f);
+	static float FDecrement(float Value);
 	//
-	/** Math:: (Multiply) Value = Value * f. */
+	/** Math:: Multiply Value. (Value*Value). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "*=", FriendlyName = "Multiply", Keywords = "bxbl float multiply *="))
-	static float FMultiply(float Value, float f);
+	static float FMultiply(float Value);
 	//
-	/** Math:: (Divide) Value = Value / f. */
-	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "/=", FriendlyName = "Divide", Keywords = "bxbl float divide /="))
+	/** Math:: Divide Value. (Value/Value*i). */
+	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "/=", FriendlyName = "Divide", Keywords = "bxbl int divide /="))
 	static float FDivide(float Value, float f);
 	//
-	/** Math:: (Percent) Value = Value * f / 100. */
+	/** Math:: Percent (Value=Value*i/100). */
 	UFUNCTION(BlueprintPure, Category = "Blueprint Extensions|Math", meta = (HidePin = "WorldContextObject", DefaultToSelf = "WorldContextObject", CompactNodeTitle = "%%", FriendlyName = "Percent", Keywords = "bxbl int percent %%"))
 	static float FPercent(float Value, float f);
 };

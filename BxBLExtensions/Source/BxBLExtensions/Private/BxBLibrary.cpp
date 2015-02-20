@@ -290,24 +290,24 @@ int32 UBxBLibrary::INTPreDecrement(int32 Value)
 	return --Value;
 }
 //
-int32 UBxBLibrary::INTIncrement(int32 Value, int32 i)
+int32 UBxBLibrary::INTIncrement(int32 Value)
 {
-	return (Value += i);
+	return (Value += Value);
 }
 //
-int32 UBxBLibrary::INTDecrement(int32 Value, int32 i)
+int32 UBxBLibrary::INTDecrement(int32 Value)
 {
-	return (Value -= i);
+	return (Value -= Value);
 }
 //
-int32 UBxBLibrary::INTMultiply(int32 Value, int32 i)
+int32 UBxBLibrary::INTMultiply(int32 Value)
 {
-	return (Value *= i);
+	return (Value *= Value);
 }
 //
 int32 UBxBLibrary::INTDivide(int32 Value, int32 i)
 {
-	return (Value /= i);
+	return (Value /= (Value*i));
 }
 //
 int32 UBxBLibrary::INTModulo(int32 Value, int32 i)
@@ -341,24 +341,24 @@ float UBxBLibrary::FPreDecrement(float Value)
 	return --Value;
 }
 //
-float UBxBLibrary::FIncrement(float Value, float f)
+float UBxBLibrary::FIncrement(float Value)
 {
-	return (Value += f);
+	return (Value += Value);
 }
 //
-float UBxBLibrary::FDecrement(float Value, float f)
+float UBxBLibrary::FDecrement(float Value)
 {
-	return (Value -= f);
+	return (Value -= Value);
 }
 //
-float UBxBLibrary::FMultiply(float Value, float f)
+float UBxBLibrary::FMultiply(float Value)
 {
-	return (Value *= f);
+	return (Value *= Value);
 }
 //
 float UBxBLibrary::FDivide(float Value, float f)
 {
-	return (Value /= f);
+	return (Value /= (Value*f));
 }
 //
 float UBxBLibrary::FPercent(float Value, float f)
